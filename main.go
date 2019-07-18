@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"time"
 )
+
 func main() {
 	gin.DisableConsoleColor()
 	gin.SetMode(gin.ReleaseMode)

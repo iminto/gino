@@ -7,9 +7,9 @@ type UserModel struct {
 }
 
 type User struct {
-	ID int `gorm:"AUTO_INCREMENT"`
-	Name string
-	Email string
+	ID       int `gorm:"AUTO_INCREMENT"`
+	Name     string
+	Email    string
 	Password string
-	RegTime int64
+	RegTime  int64
 }
