@@ -51,3 +51,8 @@ func UserLogin(context *gin.Context) {
 
 	}
 }
+
+func UserLogout(context *gin.Context) {
+	context.SetCookie("user", "", 3600, "/", "localhost", false, true)
+	context.Redirect(http.StatusMovedPermanently, "/")
+}

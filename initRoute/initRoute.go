@@ -2,6 +2,7 @@ package initRoute
 
 import (
 	"gindemo/handle"
+	"gindemo/middleware"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,8 +17,9 @@ func SetupRoute() *gin.Engine {
 	{
 		userRouter.POST("/register", handle.UserRegister)
 		userRouter.POST("/login", handle.UserLogin)
+		userRouter.GET("/logout",handle.UserLogout)
 	}
-	route.GET("/ping", handle.Pong)
+	route.GET("/ping", middleware.Auth(),handle.Pong)
 	route.POST("/upload", handle.UploadImg) //curl -X POST http://localhost:8090/upload -F "file=@/home/koudai/下载/md5.gif" \-H "Content-Type: multipart/form-data"
 	return route
 }
