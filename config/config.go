@@ -13,7 +13,7 @@ type WebConfig struct {
 var Config = WebConfig{
 	HostAddr:     ":8090",
 	DbType:       "mysql",
-	DSN:          "www:123456@tcp(localhost:3306)/test?charset=utf8&parseTime=True&loc=Asia%2FShanghai",
+	DSN:          "web:web123@tcp(10.180.249.73:3306)/test?charset=utf8&parseTime=True&loc=Asia%2FShanghai",
 	MaxIdleConns: 5,
 	MaxLifetime:  7200,
 	MaxOpenConns: 5,
