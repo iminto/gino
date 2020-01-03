@@ -2,6 +2,7 @@ package handle
 
 import (
 	"gindemo/model"
+	"gindemo/service"
 	"gindemo/util"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -55,4 +56,10 @@ func UserLogin(context *gin.Context) {
 func UserLogout(context *gin.Context) {
 	context.SetCookie("user", "", 3600, "/", "localhost", false, true)
 	context.Redirect(http.StatusMovedPermanently, "/")
+}
+
+func UserList(ctx *gin.Context) {
+	var result []model.User
+	result = service.UserList()
+	ctx.JSON(http.StatusOK, result)
 }
