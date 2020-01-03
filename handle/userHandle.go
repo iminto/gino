@@ -46,7 +46,7 @@ func UserLogin(context *gin.Context) {
 			se, err := util.AesEncrypt(result.Email + "|" + strconv.Itoa(result.ID) + "|" + strconv.FormatInt(time.Now().Unix(), 10))
 			if err == nil {
 				context.SetCookie("user", se, 3600, "/", "localhost", false, true)
-				context.Redirect(http.StatusMovedPermanently, "/")
+				context.Redirect(http.StatusFound, "/")
 			}
 		}
 
@@ -55,7 +55,7 @@ func UserLogin(context *gin.Context) {
 
 func UserLogout(context *gin.Context) {
 	context.SetCookie("user", "", -1, "/", "localhost", false, true)
-	context.Redirect(http.StatusMovedPermanently, "/")
+	context.Redirect(http.StatusFound, "/")
 }
 
 func UserList(ctx *gin.Context) {
