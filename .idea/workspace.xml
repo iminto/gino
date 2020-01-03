@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e92b2225-da39-48f8-aeff-c7acfb71b4f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handle/userHandle.go" beforeDir="false" afterPath="$PROJECT_DIR$/handle/userHandle.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initRoute/initRoute.go" beforeDir="false" afterPath="$PROJECT_DIR$/initRoute/initRoute.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statics/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/statics/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statics/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/statics/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handle/pageHandle.go" beforeDir="false" afterPath="$PROJECT_DIR$/handle/pageHandle.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/userModel.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/userModel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.tmpl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -125,6 +125,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加list查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加list查询" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>https://goproxy.io</proxy>
@@ -138,25 +142,33 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="401" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1578014304334" />
+    <state x="273" y="0" key="CommitChangelistDialog2" timestamp="1578015359094">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="273" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578015359094" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1577931759153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1577931759153" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1578015290532">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1578016441812">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578015290532" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1578015290532">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578016441812" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1578016441811">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578015290532" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1578015290532">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578016441811" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1578016441811">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578015290532" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1578015290532">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578016441811" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1578016441811">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578015290532" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578016441811" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1578015379048">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1578015379048" />
   </component>
 </project>

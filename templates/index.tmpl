@@ -18,5 +18,10 @@
     {{template "header"}}
 </header>
 <main>{{ .title }}</main>
+<ul>
+    {{ range .userList }}
+         <li>{{ .Username }}  ---> {{ .Email }}</li>
+    {{ end }}
+</ul>
 </body>
 </html>

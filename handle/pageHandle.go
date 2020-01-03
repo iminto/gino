@@ -2,6 +2,8 @@ package handle
 
 import (
 	"fmt"
+	"gindemo/model"
+	"gindemo/service"
 	"gindemo/util"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -23,8 +25,11 @@ func Index(ctx *gin.Context) {
 	} else {
 		println(err.Error())
 	}
+	var result []model.User
+	result = service.UserList()
 	ctx.HTML(http.StatusOK, "index.tmpl", gin.H{
 		"title": "hello guy， " + user,
+		"userList":result,
 	})
 }
 

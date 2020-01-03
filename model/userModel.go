@@ -8,6 +8,7 @@ type UserModel struct {
 
 type User struct {
 	ID       int `gorm:"AUTO_INCREMENT"`
+	Username string
 	Name     string
 	Email    string
 	Password string
