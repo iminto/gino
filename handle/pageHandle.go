@@ -13,12 +13,12 @@ import (
 
 func Index(ctx *gin.Context) {
 	cookie, err := ctx.Cookie("user")
-	var user string = ""
+	var User string = ""
 	if err == nil {
 		text, error := util.AesDecrypt(cookie)
 		if error == nil {
 			deCookie := strings.Split(text, "|")
-			user = deCookie[0]
+			User = deCookie[0]
 		} else {
 			println(error.Error())
 		}
@@ -28,7 +28,7 @@ func Index(ctx *gin.Context) {
 	var result []model.User
 	result = service.UserList()
 	ctx.HTML(http.StatusOK, "index.tmpl", gin.H{
-		"title": "hello guy， " + user,
+		"user":User,
 		"userList":result,
 	})
 }
