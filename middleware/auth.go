@@ -1,6 +1,9 @@
 package middleware
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+	"github.com/gin-gonic/gin"
+)
 
 func Auth() gin.HandlerFunc{
 	return func(context *gin.Context) {
@@ -12,5 +15,11 @@ func Auth() gin.HandlerFunc{
 			println("已经授权")
 			context.Next()
 		}
+	}
+}
+
+func GlobalEcho() gin.HandlerFunc{
+	return func(context *gin.Context) {
+		fmt.Println("...global handle...")
 	}
 }

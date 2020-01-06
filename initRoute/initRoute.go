@@ -8,6 +8,7 @@ import (
 
 func SetupRoute() *gin.Engine {
 	route := gin.Default()
+	route.Use(middleware.GlobalEcho())
 	route.Static("/statics", "./statics")
 	route.StaticFile("/favicon.ico", "./favicon.ico")
 	route.LoadHTMLGlob("templates/*.tmpl")
