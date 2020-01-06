@@ -20,10 +20,10 @@ func Index(ctx *gin.Context) {
 			deCookie := strings.Split(text, "|")
 			User = deCookie[0]
 		} else {
-			println(error.Error())
+			println("index error:"+error.Error())
 		}
 	} else {
-		println(err.Error())
+		println("index error:"+err.Error())
 	}
 	var result []model.User
 	result = service.UserList()

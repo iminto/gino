@@ -21,5 +21,6 @@ func Auth() gin.HandlerFunc{
 func GlobalEcho() gin.HandlerFunc{
 	return func(context *gin.Context) {
 		fmt.Println("...global handle...")
+		context.Next()
 	}
 }
