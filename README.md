@@ -11,7 +11,7 @@ $env:GOPROXY="https://goproxy.io" #Windows
 export GOPROXY=https://goproxy.io #linux
 #修改config/config.go中数据库配置
 #编译
-go build
+go build  -mod=vendor -ldflags="-s -w"
 #运行
 ./gindemo
 ```

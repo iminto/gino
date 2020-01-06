@@ -23,6 +23,6 @@ func main() {
 		WriteTimeout:   2 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
-	s.ListenAndServe();
+	s.ListenAndServe()
 	//s.ListenAndServeTLS("gd.pem","gd-key.pem")
 }
