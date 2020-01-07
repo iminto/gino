@@ -23,7 +23,7 @@ func UserRegister(context *gin.Context) {
 		if result.Email != "" {
 			context.String(http.StatusBadRequest, "email已经注册")
 		} else {
-			result := model.User{Email: user.Email, Password: user.Password, Name: user.Email, RegTime: time.Now().Unix()}
+			result := model.User{Email: user.Email, Password: user.Password, Name: user.Email, RegTime: time.Now().Unix(),CreatedAt:time.Now(),UpdatedAt:time.Now()}
 			model.Db.Table("users").Create(&result)
 			context.Redirect(http.StatusMovedPermanently, "/")
 		}

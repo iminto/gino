@@ -1,5 +1,7 @@
 package model
 
+import "time"
+
 type UserModel struct {
 	Email         string `form:"email"  binding:"email"`
 	Password      string `form:"password"`
@@ -13,6 +15,8 @@ type User struct {
 	Email    string
 	Password string
 	RegTime  int64
+	UpdatedAt time.Time
+	CreatedAt time.Time
 }
 
 type Result struct{
