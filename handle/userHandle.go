@@ -59,7 +59,10 @@ func UserLogout(context *gin.Context) {
 }
 
 func UserList(ctx *gin.Context) {
-	var result []model.User
-	result = service.UserList()
-	ctx.JSON(http.StatusOK, result)
+	var userList []model.User
+	userList = service.UserList()
+	var pageResult model.Result
+	pageResult.Code=1
+	pageResult.Data=userList
+	ctx.JSON(http.StatusOK, pageResult)
 }

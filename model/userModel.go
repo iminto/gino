@@ -14,3 +14,8 @@ type User struct {
 	Password string
 	RegTime  int64
 }
+
+type Result struct{
+	Code int
+	Data interface{}
+}
