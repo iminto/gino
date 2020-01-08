@@ -5,11 +5,18 @@ import (
 	"gindemo/initRoute"
 	"gindemo/model"
 	"github.com/gin-gonic/gin"
+	"log"
 	"net/http"
+	_ "net/http/pprof"
 	"time"
 )
 
 func main() {
+	if config.Config.Prof== true {
+		go func() {
+			log.Println(http.ListenAndServe("localhost:6060", nil))
+		}()
+	}
 	gin.DisableConsoleColor()
 	gin.SetMode(gin.ReleaseMode)
 	model.InitDB(&config.Config)

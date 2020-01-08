@@ -8,6 +8,7 @@ type WebConfig struct {
 	MaxOpenConns int
 	MaxLifetime  int
 	SQLDebug     bool
+	Prof	bool
 }
 
 var Config = WebConfig{
@@ -18,4 +19,5 @@ var Config = WebConfig{
 	MaxLifetime:  7200,
 	MaxOpenConns: 5,
 	SQLDebug:     true,
+	Prof: false,
 }
