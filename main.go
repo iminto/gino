@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	if config.Config.Prof== true {
+	if config.Config.Prof == true {
 		go func() {
 			log.Println(http.ListenAndServe("localhost:6060", nil))
 		}()
